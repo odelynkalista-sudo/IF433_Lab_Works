@@ -23,20 +23,17 @@ fun main() {
 
     println("=== MINI RPG BATTLE ===")
 
-    // 1. Input Nama & Damage
     print("Masukkan Nama Hero: ")
     val nameInput = scanner.nextLine()
     print("Masukkan Stat Damage: ")
     val damageInput = scanner.nextInt()
 
-    // 2. Buat Objek Hero & Variabel Musuh
     val myHero = Hero(nameInput, damageInput)
     var enemyHp = 100
     val enemyName = "Wild Goblin"
 
     println("\nBattle Start! ${myHero.name} vs $enemyName")
 
-    // 3. Game Loop (Main Loop)
     while (myHero.isAlive() && enemyHp > 0) {
         println("\n--- STATUS ---")
         println("${myHero.name} HP: ${myHero.hp} | $enemyName HP: $enemyHp")
@@ -45,12 +42,10 @@ fun main() {
 
         when (scanner.nextInt()) {
             1 -> {
-                // Hero menyerang
                 myHero.attack(enemyName)
                 enemyHp -= myHero.baseDamage
                 println("$enemyName kehilangan ${myHero.baseDamage} HP!")
 
-                // Jika musuh masih hidup, musuh membalas
                 if (enemyHp > 0) {
                     val randomDamage = (10..20).random()
                     println("$enemyName menyerang balik!")
