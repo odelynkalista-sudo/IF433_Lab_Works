@@ -15,5 +15,12 @@ fun main() {
     sword.damage = -50
     sword.damage = 9999
     println("Weapon: ${sword.name}, Damage: ${sword.damage}, Tier: ${sword.tier}")
+
+    println("\n--- Test Tugas 2: Player ---")
+    val player = Player("Odelyn")
+
+    player.addXp(50)
+    player.addXp(60)
+    println("Player: ${player.username}, Level: ${player.level}")
 }
 
