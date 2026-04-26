@@ -4,7 +4,6 @@ class Manager (name: String, baseSalary: Int) : Employee(name, baseSalary) {
         [cite: 86]
 
         override fun work() {
-            [cite: 87]
             println("$name sedang memimpin rapat divisi.")
         }
 
