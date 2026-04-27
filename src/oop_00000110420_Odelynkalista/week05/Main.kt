@@ -27,4 +27,21 @@ fun main() {
     println("Luas Persegi (sisi 5): ${math.hitungLuas(5)}")
     println("Luas Persegi Panjang (5x10): ${math.hitungLuas(5, 10)}")
     println("Luas Lingkaran (r 7.0): ${math.hitungLuas(7.0)}")
+
+    println("\n=== SISTEM PEMBAYARAN (TASK 2) ===")
+    val myEWallet = EWallet("Odelyn E-Wallet", 50000.0)
+    val myCreditCard = CreditCard("Odelyn Visa", 100000.0)
+
+    val listPembayaran: List<PaymentMethod> = listOf(myEWallet, myCreditCard)
+
+    for (pay in listPembayaran) {
+        println("--- Memproses akun: ${pay.accountName} ---")
+        pay.processPayment(75000.0)
+
+        if (pay is EWallet) {
+            println("Mendeteksi E-Wallet, mencoba auto top-up...")
+            pay.topUp(50000.0)
+            pay.processPayment(75000.0)
+        }
+    }
 }
