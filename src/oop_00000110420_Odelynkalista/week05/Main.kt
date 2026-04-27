@@ -42,6 +42,7 @@ fun main() {
             println("Mendeteksi E-Wallet, mencoba auto top-up...")
             pay.topUp(50000.0)
             pay.processPayment(75000.0)
+
         }
     }
 }
