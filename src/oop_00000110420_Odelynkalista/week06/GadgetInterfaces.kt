@@ -2,6 +2,7 @@ package oop_00000110420_Odelynkalista.week06
 
 interface Camera {
     fun turnOn() { println("Lensa kamera terbuka dan sensor aktif.") }
+    fun showTime()
 }
 
 interface Phone {
