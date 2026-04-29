@@ -6,4 +6,7 @@ class Smartphone : Camera, Phone {
         super<Phone>.turnOn()
         println("Sistem operasi Smartphone berhasil booting.")
     }
+
+    override fun showTime() {
+    }
 }
