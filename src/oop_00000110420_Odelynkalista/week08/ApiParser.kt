@@ -19,6 +19,4 @@ class ApiParser {
            else -> null
         }
     }
-
-    // ... method checkout akan ada di checkpoint 18 ...
 }
