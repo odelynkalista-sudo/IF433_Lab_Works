@@ -18,10 +18,11 @@ fun main() {
             val product = parser.parseProduct(raw)
             product?.let {
                 println("Berhasil Parsing: ${it.name}")
+                parser.checkout(it)
             } ?: println("Log: Produk di-skip karena tipe tidak dikenal.")
 
         } catch (e: IllegalArgumentException) {
-            println("DATA ERROR: ${e.message}")
+            println("Peringatan: ${e.message}")
         }
         println("-------------------")
     }
